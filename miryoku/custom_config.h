@@ -3,12 +3,16 @@
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20
 
-// Keep macros for use elsewhere if desired
+// Make sure this is present:
+#define U_MOUSE u_mouse
+
+// Define mouse button mappings
 #define MIRYOKU_MAPPING_LH_THUMB_3 &mo U_MOUSE
 #define MIRYOKU_MAPPING_RH_THUMB_1 &mkp BTN1
 #define MIRYOKU_MAPPING_RH_THUMB_2 &mkp BTN3
 #define MIRYOKU_MAPPING_RH_THUMB_3 &mkp BTN2
 
+// MOUSE layer — 40 arguments
 #define MIRYOKU_LAYER_MOUSE \
   U_NA,  U_NA,     U_NA,      U_NA,        U_NA,         U_NA,     U_NA,        U_NA,         U_NA,         U_NA, \
   U_BTN1,U_BTN2,   U_BTN3,    U_BTN4,      U_BTN5,       U_MH_LEFT,U_MH_DOWN,  U_MH_UP,      U_MH_RIGHT,   U_NA, \
