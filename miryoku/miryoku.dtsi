@@ -1,5 +1,9 @@
+/* miryoku.dtsi */
+
+//
 // Copyright 2022 Manna Harbour
 // https://github.com/manna-harbour/miryoku
+//
 
 #include <behaviors.dtsi>
 #include <behaviors/mouse_key_press.dtsi>
@@ -17,7 +21,7 @@
 
 #include <dt-bindings/zmk/mouse.h>
 
-/ {
+&{ 
   keymap {
     compatible = "zmk,keymap";
 #define MIRYOKU_X(LAYER, STRING) \
@@ -25,13 +29,12 @@
       display-name = STRING; \
       bindings = < U_MACRO_VA_ARGS(MIRYOKU_LAYERMAPPING_##LAYER, MIRYOKU_LAYER_##LAYER) >; \
     };
-#include "miryoku_layers.dtsi"
+MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
   };
 };
 
 #include "miryoku_shift_functions.dtsi"
-
 #include "miryoku_double_tap_guard.dtsi"
 
 #if defined (MIRYOKU_KLUDGE_MOUSEKEYSPR)
