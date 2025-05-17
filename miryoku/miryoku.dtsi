@@ -1,3 +1,6 @@
+// Copyright 2022 Manna Harbour
+// https://github.com/manna-harbour/miryoku
+
 #include <behaviors.dtsi>
 #include <behaviors/mouse_key_press.dtsi>
 #if defined (MIRYOKU_KLUDGE_MOUSEKEYSPR)
