@@ -2,15 +2,15 @@
 // https://github.com/manna-harbour/miryoku
 
 &mmv {
-  acceleration-exponent = <U_MOUSE_MOVE_EXPONENT>;
-  time-to-max-speed-ms = <U_MOUSE_MOVE_TIME>;
-  delay-ms = <U_MOUSE_MOVE_DELAY>;
+  acceleration-exponent = <2>;
+  time-to-max-speed-ms = <100>;
+  delay-ms = <0>;
 };
 
 &msc {
-  acceleration-exponent = <U_MOUSE_SCROLL_EXPONENT>;
-  time-to-max-speed-ms = <U_MOUSE_SCROLL_TIME>;
-  delay-ms = <U_MOUSE_SCROLL_DELAY>;
+  acceleration-exponent = <3>;
+  time-to-max-speed-ms = <100>;
+  delay-ms = <0>;
 };
 
 &keymap {
