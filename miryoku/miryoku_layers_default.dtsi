@@ -1,11 +1,9 @@
-/* miryoku_layers_default.dtsi
- * Minimal static list of layers for the keymap block
- * The MIRYOKU_X macro is defined a few lines above in miryoku.dtsi
- */
+/* miryoku/miryoku_layers_default.dtsi */
 
-MIRYOKU_X(BASE,   "Base")
-MIRYOKU_X(NAV,    "Nav")
-MIRYOKU_X(MOUSE,  "Mouse")
-MIRYOKU_X(SYM,    "Sym")
-MIRYOKU_X(NUM,    "Num")
-MIRYOKU_X(FUN,    "Fun")
+MIRYOKU_X(BASE,   "Base")   /* Colemak‑DH alphas, default thumb keys   */
+MIRYOKU_X(SYM,    "Sym")    /* Symbols                                  */
+MIRYOKU_X(NUM,    "Num")    /* Numbers & fn row                         */
+MIRYOKU_X(NAV,    "Nav")    /* Navigation                               */
+MIRYOKU_X(MEDIA,  "Media")  /* Media / BT / system                      */
+MIRYOKU_X(MOUSE,  "Mouse")  /* ← your new dedicated mouse layer         */
+MIRYOKU_X(FUN,    "Fun")    /* F‑keys & misc.                           */
