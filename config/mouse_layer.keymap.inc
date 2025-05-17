@@ -1,13 +1,13 @@
 &mmv {
   acceleration-exponent = <2>;
-  time-to-max-speed-ms  = <100>;
-  delay-ms              = <0>;
+  time-to-max-speed-ms = <100>;
+  delay-ms = <0>;
 };
 
 &msc {
   acceleration-exponent = <3>;
-  time-to-max-speed-ms  = <100>;
-  delay-ms              = <0>;
+  time-to-max-speed-ms = <100>;
+  delay-ms = <0>;
 };
 
 &keymap {

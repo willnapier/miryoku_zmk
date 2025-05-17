@@ -1,20 +1,7 @@
 #include "../miryoku/custom_config.h"
 #include "../miryoku/mapping/38/totem.h"
 #include "../miryoku/miryoku.dtsi"
-#include "../config/mouse_layer.keymap.inc"
 
-/ {                                             /*── Mouse overlay ───────*/
-
-  &mmv {                                        /* Pointer-move defaults */
-    acceleration-exponent = <2>;
-    time-to-max-speed-ms  = <100>;
-    delay-ms              = <0>;
-  };
-
-  &msc {                                        /* Scroll defaults */
-    acceleration-exponent = <3>;
-    time-to-max-speed-ms  = <100>;
-    delay-ms              = <0>;
-  };
-
-};                                              /*── end root ────────────*/
+ / {
+   #include "mouse_layer.keymap.inc"
+ };
