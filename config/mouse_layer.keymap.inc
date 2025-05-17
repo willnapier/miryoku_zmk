@@ -1,3 +1,15 @@
+&mmv {
+  acceleration-exponent = <2>;
+  time-to-max-speed-ms = <100>;
+  delay-ms = <0>;
+};
+
+&msc {
+  acceleration-exponent = <3>;
+  time-to-max-speed-ms = <100>;
+  delay-ms = <0>;
+};
+
 u_mouse {
   bindings = <
     /* Row-1 top (5 L + 5 R) */
