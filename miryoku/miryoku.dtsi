@@ -25,7 +25,7 @@
       display-name = STRING; \
       bindings = < U_MACRO_VA_ARGS(MIRYOKU_LAYERMAPPING_##LAYER, MIRYOKU_LAYER_##LAYER) >; \
     };
-MIRYOKU_LAYER_LIST
+#include "miryoku_layers.dtsi"
 #undef MIRYOKU_X
   };
 };
