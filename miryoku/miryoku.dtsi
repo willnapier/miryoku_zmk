@@ -3,7 +3,7 @@
 
 #include <behaviors.dtsi>
 #include <behaviors/mouse_key_press.dtsi>
-#if defined (MIRYOKU_KLUDGE_MOUSEKEYSPR)
+#if defined(MIRYOKU_KLUDGE_MOUSEKEYSPR)
   #include <behaviors/mouse_move.dtsi>
   #include <behaviors/mouse_scroll.dtsi>
 #endif
@@ -19,32 +19,46 @@
 / {
   keymap {
     compatible = "zmk,keymap";
-    #include "miryoku_layers_default.dtsi"
+
+#define MIRYOKU_X(LAYER, STRING) \
+    LAYER { \
+      display-name = STRING; \
+      bindings = < U_MACRO_VA_ARGS(MIRYOKU_LAYERMAPPING_##LAYER, \
+                                   MIRYOKU_LAYER_##LAYER) >; \
+    };
+
+#if defined(MIRYOKU_LAYER_FILE)
+  #include MIRYOKU_LAYER_FILE
+#else
+  #include "miryoku_layers_default.dtsi"
+#endif
+
+#undef  MIRYOKU_X
   };
 };
 
 #include "miryoku_shift_functions.dtsi"
 #include "miryoku_double_tap_guard.dtsi"
 
-#if defined (MIRYOKU_KLUDGE_MOUSEKEYSPR)
+#if defined(MIRYOKU_KLUDGE_MOUSEKEYSPR)
   #include "miryoku_kludge_mousekeyspr.dtsi"
 #else
   #include "miryoku_mousekeys.dtsi"
 #endif
 
-#if defined (MIRYOKU_KLUDGE_THUMBCOMBOS)
+#if defined(MIRYOKU_KLUDGE_THUMBCOMBOS)
   #include "miryoku_kludge_thumbcombos.dtsi"
 #endif
 
-#if defined (MIRYOKU_KLUDGE_TOPROWCOMBOS)
+#if defined(MIRYOKU_KLUDGE_TOPROWCOMBOS)
   #include "miryoku_kludge_toprowcombos.dtsi"
 #endif
 
-#if defined (MIRYOKU_KLUDGE_BOTTOMROWCOMBOS)
+#if defined(MIRYOKU_KLUDGE_BOTTOMROWCOMBOS)
   #include "miryoku_kludge_bottomrowcombos.dtsi"
 #endif
 
-#if defined (MIRYOKU_KLUDGE_TAPDELAY)
+#if defined(MIRYOKU_KLUDGE_TAPDELAY)
   #include "miryoku_kludge_tapdelay.dtsi"
 #else
   #include "miryoku_behaviors.dtsi"
