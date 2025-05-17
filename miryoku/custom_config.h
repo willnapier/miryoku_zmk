@@ -3,10 +3,10 @@
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20
 
-// Add a momentary key to access the Mouse layer
+// Momentary access to mouse layer from the left innermost thumb key
 #define MIRYOKU_MAPPING_LH_THUMB_3 &mo MOUSE
 
-// Define the MOUSE layer contents (40 keycodes total)
+// Mouse layer definition: must contain exactly 40 entries
 #define MIRYOKU_LAYER_MOUSE \
   U_BTN1, U_BTN2, U_BTN3, U_BTN4, U_BTN5, \
   U_NA,   U_MH_LEFT, U_MH_DOWN, U_MH_UP, U_MH_RIGHT, \
