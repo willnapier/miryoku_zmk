@@ -1,7 +1,7 @@
 u_mouse {
   bindings = <
     /* Row-1 top (5 L + 5 R) */
-    &none &none &none &none &none
+    &none &none &none &none &none // temp test comment
     &none &none &none &none &none
 
     /* Row-2 home (5 L + 5 R) */
