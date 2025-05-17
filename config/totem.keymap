@@ -1,3 +1,4 @@
 #include "../miryoku/custom_config.h"
 #include "../miryoku/mapping/38/totem.h"
 #include "../miryoku/miryoku.dtsi"
+#include "mouse_layer.keymap.inc"
