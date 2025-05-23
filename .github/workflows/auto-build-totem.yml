@@ -1,0 +1,25 @@
+# Copyright 2022 Manna Harbour
+# https://github.com/manna-harbour/miryoku
+
+name: 'Auto Build Totem'
+on: 
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    uses: ./.github/workflows/main.yml
+    secrets: inherit
+    with:
+      board: '["seeeduino_xiao_ble"]'
+      shield: '["totem_left,totem_right"]'
+      alphas: '["default"]'
+      nav: '["default"]'
+      layers: '["default"]'
+      mapping: '["default"]'
+      custom_config: '["default"]'
+      kconfig: '["default"]'
+      branches: '["default"]'
+      modules: '["default"]'
