@@ -3,11 +3,11 @@
 
 #pragma once
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 2800
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1400  // Reduced from 2800 (50% reduction)
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 100   // Keep scroll speed unchanged
 
 #define U_MOUSE_MOVE_EXPONENT 1
-#define U_MOUSE_MOVE_TIME 60
+#define U_MOUSE_MOVE_TIME 60                // Keep your fast acceleration
 #define U_MOUSE_MOVE_DELAY 0
 #define U_MOUSE_SCROLL_EXPONENT 1
 #define U_MOUSE_SCROLL_TIME 5000
@@ -25,4 +25,3 @@
 #define U_WH_L &msc SCRL_LEFT
 #define U_WH_R &msc SCRL_RIGHT
 #define U_WH_U &msc SCRL_UP
-
