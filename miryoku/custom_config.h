@@ -9,4 +9,4 @@
 #define U_PINKY_L &kp F13
 
 // Right outer pinky: F14 key 
-#define U_PINKY_R &kp F14
+#define U_PINKY_R &kp F16
