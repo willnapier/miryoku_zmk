@@ -5,8 +5,8 @@
 // These keys are now completely separate from Q and ' keys
 
 // Left outer pinky: Immediate Mouseless activation
-// No hold timing needed - instant GUI key press
-#define U_PINKY_L &kp LGUI
+// No hold timing needed
+#define U_PINKY_L &kp F13
 
-// Right outer pinky: Escape key (useful for quick exits)
-#define U_PINKY_R &kp ESC
+// Right outer pinky: F14 key 
+#define U_PINKY_R &kp F14

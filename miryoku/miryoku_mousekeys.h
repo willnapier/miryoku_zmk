@@ -3,7 +3,7 @@
 
 #pragma once
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1400  // Reduced from 2800 (50% reduction)
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // Reduced from 2800 (50% reduction)
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100   // Keep scroll speed unchanged
 
 #define U_MOUSE_MOVE_EXPONENT 1
