@@ -6,7 +6,7 @@
 
 // Left outer pinky: Immediate Mouseless activation
 // No hold timing needed
-#define U_PINKY_L &kp PAUS
+#define U_PINKY_L &kp F13
 
 // Right outer pinky: F14 key 
-#define U_PINKY_R &kp SLCK
+#define U_PINKY_R &kp F17
