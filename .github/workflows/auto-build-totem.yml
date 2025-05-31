@@ -1,15 +1,13 @@
 # Copyright 2022 Manna Harbour
 # https://github.com/manna-harbour/miryoku
-
 name: 'Auto Build Totem'
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
 jobs:
-  build-totem-green:
+  build:
     uses: ./.github/workflows/main.yml
     secrets: inherit
     with:
@@ -20,36 +18,6 @@ jobs:
       layers: '["default"]'
       mapping: '["default"]'
       custom_config: '["default"]'
-      kconfig: '["CONFIG_ZMK_KEYBOARD_NAME=\"TOTEM_GREEN\""]'
-      branches: '["default"]'
-      modules: '["default"]'
-
-  build-totem-kh:
-    uses: ./.github/workflows/main.yml
-    secrets: inherit
-    with:
-      board: '["seeeduino_xiao_ble"]'
-      shield: '["totem_left","totem_right"]'
-      alphas: '["default"]'
-      nav: '["default"]'
-      layers: '["default"]'
-      mapping: '["default"]'
-      custom_config: '["default"]'
-      kconfig: '["CONFIG_ZMK_KEYBOARD_NAME=\"TOTEM_KH\""]'
-      branches: '["default"]'
-      modules: '["default"]'
-
-  build-totem-wn:
-    uses: ./.github/workflows/main.yml
-    secrets: inherit
-    with:
-      board: '["seeeduino_xiao_ble"]'
-      shield: '["totem_left","totem_right"]'
-      alphas: '["default"]'
-      nav: '["default"]'
-      layers: '["default"]'
-      mapping: '["default"]'
-      custom_config: '["default"]'
-      kconfig: '["CONFIG_ZMK_KEYBOARD_NAME=\"TOTEM_WN\""]'
+      kconfig: '["default"]'
       branches: '["default"]'
       modules: '["default"]'
