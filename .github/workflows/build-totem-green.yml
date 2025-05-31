@@ -1,7 +1,7 @@
 # Copyright 2022 Manna Harbour
 # https://github.com/manna-harbour/miryoku
 
-name: 'Auto Build Totem'
+name: 'Build Totem GREEN'
 on:
   push:
     branches: [ main ]
@@ -15,15 +15,11 @@ jobs:
     with:
       board: '["seeeduino_xiao_ble"]'
       shield: '["totem_left","totem_right"]'
-      kconfig: '[
-        "CONFIG_ZMK_KEYBOARD_NAME=\"TOTEM_GREEN\"",
-        "CONFIG_ZMK_KEYBOARD_NAME=\"TOTEM_KH\"",
-        "CONFIG_ZMK_KEYBOARD_NAME=\"TOTEM_WN\""
-      ]'
       alphas: '["default"]'
       nav: '["default"]'
       layers: '["default"]'
       mapping: '["default"]'
       custom_config: '["default"]'
+      kconfig: '["CONFIG_ZMK_KEYBOARD_NAME=\"TOTEM_GREEN\""]'
       branches: '["default"]'
       modules: '["default"]'
