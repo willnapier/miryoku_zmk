@@ -9,21 +9,65 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-    uses: ./.github/workflows/main.yml
-    secrets: inherit
-    with:
-      board: '["seeeduino_xiao_ble"]'
-      shield: '["totem_left","totem_right"]'
-      custom_config: '[
-        "#define CONFIG_ZMK_KEYBOARD_NAME \"TOTEM_GREEN\"",
-        "#define CONFIG_ZMK_KEYBOARD_NAME \"TOTEM_KH\"",
-        "#define CONFIG_ZMK_KEYBOARD_NAME \"TOTEM_WN\""
-      ]'
-      alphas: '["default"]'
-      nav: '["default"]'
-      layers: '["default"]'
-      mapping: '["default"]'
-      kconfig: '["default"]'
-      branches: '["default"]'
-      modules: '["default"]'
+  build-green:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Copy GREEN config
+        run: cp config/totem-green.conf config/totem.conf
+      - name: Build GREEN
+        uses: ./.github/workflows/main.yml
+        with:
+          board: '["seeeduino_xiao_ble"]'
+          shield: '["totem_left","totem_right"]'
+          alphas: '["default"]'
+          nav: '["default"]'
+          layers: '["default"]'
+          mapping: '["default"]'
+          custom_config: '["default"]'
+          kconfig: '["default"]'
+          branches: '["default"]'
+          modules: '["default"]'
+        
+  build-kh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Copy KH config
+        run: cp config/totem-kh.conf config/totem.conf
+      - name: Build KH
+        uses: ./.github/workflows/main.yml
+        with:
+          board: '["seeeduino_xiao_ble"]'
+          shield: '["totem_left","totem_right"]'
+          alphas: '["default"]'
+          nav: '["default"]'
+          layers: '["default"]'
+          mapping: '["default"]'
+          custom_config: '["default"]'
+          kconfig: '["default"]'
+          branches: '["default"]'
+          modules: '["default"]'
+          
+  build-wn:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Copy WN config
+        run: cp config/totem-wn.conf config/totem.conf
+      - name: Build WN
+        uses: ./.github/workflows/main.yml
+        with:
+          board: '["seeeduino_xiao_ble"]'
+          shield: '["totem_left","totem_right"]'
+          alphas: '["default"]'
+          nav: '["default"]'
+          layers: '["default"]'
+          mapping: '["default"]'
+          custom_config: '["default"]'
+          kconfig: '["default"]'
+          branches: '["default"]'
+          modules: '["default"]'
