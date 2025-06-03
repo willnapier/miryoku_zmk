@@ -1,0 +1,25 @@
+# Copyright 2025  Will
+# Builds Miryoku firmware for the Chocofi (nice!nano v2, Corne matrix)
+
+name: 'Auto Build Chocofi'
+on:
+  push:
+    branches: [ main, multi-board-support ]
+  pull_request:
+    branches: [ main, multi-board-support ]
+
+jobs:
+  build:
+    uses: ./.github/workflows/main.yml      # re-use the Miryoku helper workflow
+    secrets: inherit
+    with:
+      board: '["nice_nano_v2"]'
+      shield: '["corne_left","corne_right"]'
+      alphas: '["default"]'
+      nav: '["default"]'
+      layers: '["default"]'
+      mapping: '["default"]'
+      custom_config: '["default"]'
+      kconfig: '["default"]'
+      branches: '["default"]'
+      modules: '["default"]'
